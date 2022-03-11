@@ -1,0 +1,16 @@
+{
+    "name": "SLIDDES.Modular.Editor",
+    "rootNamespace": "SLIDDES.Modular.Editor",
+    "references": [
+        "GUID:5e25695e81c79024b85a0cd9ca9788f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
