@@ -5,14 +5,16 @@ using UnityEditor;
 
 namespace SLIDDES.Modular.Editor
 {
-    [CustomEditor(typeof(Event))]
-    public class EditorEvent : UnityEditor.Editor
+    //[CustomEditor(typeof(Event<T>))]
+    public abstract class EditorEvent<T> : UnityEditor.Editor
     {
-        private Event selected;
+        [SerializeField] private T testValue;
 
-        private void OnEnable()
+        protected Event<T> selected;
+
+        protected virtual void OnEnable()
         {
-            selected = (Event)target;
+            selected = (Event<T>)target;
         }
 
         public override void OnInspectorGUI()
@@ -23,7 +25,8 @@ namespace SLIDDES.Modular.Editor
             // Invoke event
             if(GUILayout.Button(new GUIContent("Invoke", "Invokes the event to test it"), GUILayout.Height(32)))
             {
-                selected.Invoke();
+                selected.Invoke(testValue);
+                Debug.Log("[SLIDDES Modular] Invoked event");
             }
         }
     }

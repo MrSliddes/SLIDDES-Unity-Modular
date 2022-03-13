@@ -1,6 +1,6 @@
 {
   "name": "com.sliddes.modular",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "SLIDDES Modular",
   "description": "Modular Package",
   "keywords": [
@@ -15,5 +15,6 @@
     "url": "https://www.sliddes.com"
   },
   "type": "tool",
-  "unity": "2020.3"
+  "unity": "2020.3",
+  "hideInEditor": false
 }

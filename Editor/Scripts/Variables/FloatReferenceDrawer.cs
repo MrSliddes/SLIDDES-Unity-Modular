@@ -30,7 +30,7 @@ namespace SLIDDES.Modular.Editor
                 menu.ShowAsContext();
             }
 
-            position.position += Vector2.right * 15;
+            position.position += Vector2.right * 16;
             float value = property.FindPropertyRelative("constantValue").floatValue;
 
             if(useConstant)
@@ -41,7 +41,7 @@ namespace SLIDDES.Modular.Editor
             }
             else
             {
-                EditorGUI.ObjectField(new Rect(position.x, position.y, position.width - 15, position.height), property.FindPropertyRelative("variable"), typeof(FloatVariable), GUIContent.none);
+                EditorGUI.ObjectField(new Rect(position.x, position.y, position.width - 16, position.height), property.FindPropertyRelative("variable"), typeof(FloatVariable), GUIContent.none);
             }
 
             EditorGUI.EndProperty();

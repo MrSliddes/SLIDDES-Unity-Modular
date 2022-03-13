@@ -8,27 +8,26 @@ namespace SLIDDES.Modular
     /// <summary>
     /// An event listener that is placed on a game object to handle a response from an event
     /// </summary>
-    [AddComponentMenu("SLIDDES/Modular/Modular Event Listener")]
-    public class EventListener : MonoBehaviour
+    public class EventListener<T> : MonoBehaviour
     {
         [Tooltip("The event to listen for")]
-        public Event Event;
+        public Event<T> Event;
         [Tooltip("The response to the Event")]
-        public UnityEvent Response;
+        public UnityEvent<T> Response;
 
         private void OnEnable()
         {
-            Event.AddListener(this);
+            if(Event != null) Event.AddListener(this);
         }
 
         private void OnDisable()
         {
-            Event.RemoveListener(this);
+            if(Event != null) Event.RemoveListener(this);
         }
 
-        public void Invoke()
+        public virtual void Invoke(T type)
         {
-            Response.Invoke();
+            Response.Invoke(type);
         }
     }
 }

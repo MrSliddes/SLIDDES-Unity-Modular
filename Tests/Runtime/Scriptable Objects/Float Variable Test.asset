@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc8949bab1e45d4ea046881c881953a, type: 3}
   m_Name: Float Variable Test
   m_EditorClassIdentifier: 
-  Value: 0
+  description: 
+  resetOnQuit: 1
+  value: 55
+  onValueChangedEvent: {fileID: 0}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
