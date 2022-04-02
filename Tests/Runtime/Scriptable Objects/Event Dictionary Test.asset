@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Event Dictionary Test
   m_EditorClassIdentifier: 
   description: 
+  test: {fileID: 11400000, guid: 9fb324f1b0b4cf14ebd6bebe8f546ead, type: 2}

@@ -8,6 +8,10 @@ namespace SLIDDES.Modular.Editor
     [CustomEditor(typeof(DecimalEvent))]
     public class EditorEventDecimal : EditorEvent<decimal>
     {
-        
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            TestValue = EditorGUILayoutExtensions.DecimalField(TestValue, "Test Value");
+        }
     }
 }

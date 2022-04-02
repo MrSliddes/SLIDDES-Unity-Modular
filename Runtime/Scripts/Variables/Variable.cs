@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 namespace SLIDDES.Modular
 {
+    [System.Serializable]
     public abstract class Variable<T> : ScriptableObject
     {
         [TextArea(1, 10)]
