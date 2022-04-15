@@ -2,9 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Event = SLIDDES.Modular.Event;
 
 namespace SLIDDES.Modular.Editor
 {
+    [CustomEditor(typeof(Event))]
+    public class EditorEvent : UnityEditor.Editor
+    {
+        protected Event selected;
+
+        public virtual void OnEnable()
+        {
+            selected = (Event)target;
+        }
+
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            GUILayout.Space(16);
+
+            // Invoke event
+            EditorGUILayout.LabelField("Testing");
+            if(GUILayout.Button(new GUIContent("Invoke", "Invokes the event to test it"), GUILayout.Height(32)))
+            {
+                selected.Invoke();
+                Debug.Log("[SLIDDES Modular] Invoked event");
+            }
+        }
+    }
+
     //[CustomEditor(typeof(Event<T0>))]
     public abstract class EditorEvent<T0> : UnityEditor.Editor
     {

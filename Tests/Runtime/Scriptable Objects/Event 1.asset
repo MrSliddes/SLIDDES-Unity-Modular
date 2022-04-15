@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc9335cff0b1cc49b043d1dca02e9e8, type: 3}
-  m_Name: Event Test
+  m_Script: {fileID: 11500000, guid: 068922de1b3e37743994b4b36d42599b, type: 3}
+  m_Name: Event 1
   m_EditorClassIdentifier: 
   description: 
