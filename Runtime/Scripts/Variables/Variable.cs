@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace SLIDDES.Modular
 {
     [System.Serializable]
-    public abstract class Variable<T> : ScriptableObject
+    public abstract class Variable<T0> : ScriptableObject
     {
         [TextArea(1, 10)]
         [Tooltip("The description of what this variable is for")]
@@ -25,7 +25,7 @@ namespace SLIDDES.Modular
         /// <remarks>
         /// On value change the onValueChanged gets invoked
         /// </remarks>
-        public T Value
+        public T0 Value
         {
             get 
             {
@@ -46,22 +46,22 @@ namespace SLIDDES.Modular
         /// <remarks>
         /// This does not trigger onValueChanged
         /// </remarks>
-        public T value;
+        public T0 value;
 
         /// <summary>
         /// Event that gets triggerd if value changes
         /// </summary>
-        public Event<T> onValueChangedEvent;
+        public Event<T0> onValueChangedEvent;
         /// <summary>
         /// Unity event that gets triggerd if value changes
         /// </summary>
-        [HideInInspector] public UnityEvent<T> onValueChanged;
+        [HideInInspector] public UnityEvent<T0> onValueChanged;
 
         /// <summary>
         /// The value that gets set in the editor by user.
         /// Used for on start resetting of value
         /// </summary>
-        private T editorSetValue;
+        private T0 editorSetValue;
 
         
         protected virtual void OnEnable()
@@ -84,10 +84,10 @@ namespace SLIDDES.Modular
         /// <summary>
         /// Create an instance of this Variable
         /// </summary>
-        /// <param name="value">The value T</param>
-        public static ScriptableObject Create(System.Type type, T value)
+        /// <param name="value">The value T0</param>
+        public static ScriptableObject Create(System.Type type, T0 value)
         {
-            Variable<T> so = (Variable<T>)CreateInstance(type);
+            Variable<T0> so = (Variable<T0>)CreateInstance(type);
             so.Value = value;
             return so;
         }

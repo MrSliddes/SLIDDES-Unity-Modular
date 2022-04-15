@@ -7,16 +7,16 @@ namespace SLIDDES.Modular.Editor
 {
     //[CustomEditor(typeof())]
     [CanEditMultipleObjects]
-    public abstract class EditorEventListener<T> : UnityEditor.Editor
+    public abstract class EditorEventListener<T0> : UnityEditor.Editor
     {
-        protected EventListener<T> selected;
+        protected EventListener<T0> selected;
 
         protected SerializedProperty m_EventProp;
         protected SerializedProperty m_ResponseProp;
 
         public virtual void OnEnable()
         {
-            selected = (EventListener<T>)target;
+            selected = (EventListener<T0>)target;
             m_EventProp = serializedObject.FindProperty("Event");
             m_ResponseProp = serializedObject.FindProperty("Response");
         }
@@ -32,7 +32,8 @@ namespace SLIDDES.Modular.Editor
 
         public virtual void DrawGUIEventObjectField()
         {
-            selected.Event = (Event<T>)EditorGUILayout.ObjectField(new GUIContent("Event", "The event to listen for"), selected.Event, typeof(T), false);
+            selected.Event = (Event<T0>)EditorGUILayout.ObjectField(new GUIContent("Event", "The event to listen for"), selected.Event, typeof(T0), false);
         }
+
     }
 }

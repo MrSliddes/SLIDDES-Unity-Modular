@@ -5,19 +5,19 @@ using UnityEditor;
 
 namespace SLIDDES.Modular.Editor
 {
-    //[CustomEditor(typeof(Event<T>))]
-    public abstract class EditorEvent<T> : UnityEditor.Editor
+    //[CustomEditor(typeof(Event<T0>))]
+    public abstract class EditorEvent<T0> : UnityEditor.Editor
     {
         /// <summary>
         /// Value to test the Invoke event with
         /// </summary>
-        public T TestValue { get; protected set; }
+        public T0 TestValue { get; protected set; }
 
-        protected Event<T> selected;
+        protected Event<T0> selected;
 
         public virtual void OnEnable()
         {
-            selected = (Event<T>)target;
+            selected = (Event<T0>)target;
         }
 
         public override void OnInspectorGUI()

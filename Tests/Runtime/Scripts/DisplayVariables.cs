@@ -16,7 +16,7 @@ namespace SLIDDES.Modular.Editor.Tests
 
         public DictionaryVariable dictionaryTest;
 
-        public EmptyEvent eventEmpty;
+        public SLIDDES.Modular.Event eventTest;
 
         public DictionaryVariableReference dictionaryVariableReference;
 
@@ -29,7 +29,7 @@ namespace SLIDDES.Modular.Editor.Tests
 
         private void OnEnable()
         {
-            v.onValueChanged.AddListener(DebugFloatValue);           
+            v.onValueChanged.AddListener(DebugFloatValue);
         }
 
         private void OnDisable()
@@ -41,7 +41,7 @@ namespace SLIDDES.Modular.Editor.Tests
         void Start()
         {
             DictionaryTest();
-            eventEmpty.Invoke();
+            if(eventTest != null) eventTest.Invoke();
         }
 
         // Update is called once per frame
