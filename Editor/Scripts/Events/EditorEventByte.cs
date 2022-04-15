@@ -8,10 +8,10 @@ namespace SLIDDES.Modular.Editor
     [CustomEditor(typeof(ByteEvent))]
     public class EditorEventByte : EditorEvent<byte>
     {
-        public override void OnInspectorGUI()
+        public override void DrawTestValue()
         {
-            base.OnInspectorGUI();
-            TestValue = (byte)EditorGUILayout.IntField(new GUIContent("Test Value", "The value to test with"), TestValue);
+            base.DrawTestValue();
+            TestValue = (byte)EditorGUILayout.IntField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
         }
     }
 }

@@ -17,9 +17,9 @@ namespace SLIDDES.Modular.Editor
         /// <param name="text">GUIContent text string</param>
         /// <param name="tooltip">GUIContent tooltip string</param>
         /// <returns>char</returns>
-        public static char CharField(char value, string text = "", string tooltip = "")
+        public static char CharField(GUIContent guiContent, char value)
         {
-            return char.Parse(EditorGUILayout.TextField(new GUIContent(text == "" ? "Char" : text, tooltip), value.ToString()).Substring(0, 1));
+            return char.Parse(EditorGUILayout.TextField(new GUIContent(guiContent.text == "" ? "Char" : guiContent.text, guiContent.tooltip), value.ToString()).Substring(0, 1));
         }
 
         /// <summary>
@@ -29,9 +29,9 @@ namespace SLIDDES.Modular.Editor
         /// <param name="text">GUIContent text string</param>
         /// <param name="tooltip">GUIContent tooltip string</param>
         /// <returns>decimal</returns>
-        public static decimal DecimalField(decimal value, string text = "", string tooltip = "")
+        public static decimal DecimalField(GUIContent guiContent, decimal value)
         {
-            string s = EditorGUILayout.TextField(new GUIContent(text == "" ? "Decimal" : text, tooltip), value.ToString());
+            string s = EditorGUILayout.TextField(new GUIContent(guiContent.text == "" ? "Decimal" : guiContent.text, guiContent.tooltip), value.ToString());
             if(GUI.changed)
             {
                 if(decimal.TryParse(s, out decimal val)) return val;
@@ -46,9 +46,20 @@ namespace SLIDDES.Modular.Editor
         /// <param name="text">GUIContent text string</param>
         /// <param name="tooltip">GUIContent tooltip string</param>
         /// <returns>DictionaryVariable</returns>
-        public static DictionaryVariable DictionaryVariableField(DictionaryVariable value, string text = "", string tooltip = "")
+        public static DictionaryVariable DictionaryVariableField(GUIContent guiContent, DictionaryVariable value)
         {
-            return (DictionaryVariable)EditorGUILayout.ObjectField(new GUIContent(text == "" ? "Dictionary Variable" : text, tooltip), value, typeof(DictionaryVariable), false);
+            return (DictionaryVariable)EditorGUILayout.ObjectField(new GUIContent(guiContent.text == "" ? "Dictionary Variable" : guiContent.text, guiContent.tooltip), value, typeof(DictionaryVariable), false);
+        }
+
+        /// <summary>
+        /// Make a list variable field for entering a listvariable value
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="guiContent"></param>
+        /// <returns>ListVariable</returns>
+        public static ListVariable ListVariableField(GUIContent guiContent, ListVariable value)
+        {
+            return (ListVariable)EditorGUILayout.ObjectField(new GUIContent(guiContent.text == "" ? "List Variable" : guiContent.text, guiContent.tooltip), value, typeof(DictionaryVariable), false);
         }
     }
 }

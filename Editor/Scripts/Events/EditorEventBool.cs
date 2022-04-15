@@ -8,9 +8,9 @@ namespace SLIDDES.Modular.Editor
     [CustomEditor(typeof(BoolEvent))]
     public class EditorEventBool : EditorEvent<bool>
     {
-        public override void OnInspectorGUI()
+        public override void DrawTestValue()
         {
-            base.OnInspectorGUI();
+            base.DrawTestValue();
             TestValue = EditorGUILayout.Toggle(new GUIContent("Test Value", "The value to test with"), TestValue);
         }
     }

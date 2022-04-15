@@ -8,6 +8,10 @@ namespace SLIDDES.Modular.Editor
     [CustomEditor(typeof(IntEvent))]
     public class EditorEventInt : EditorEvent<int>
     {
-        
+        public override void DrawTestValue()
+        {
+            base.DrawTestValue();
+            TestValue = EditorGUILayout.IntField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
+        }
     }
 }

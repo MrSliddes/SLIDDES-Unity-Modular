@@ -63,6 +63,12 @@ namespace SLIDDES.Modular.Editor
                 selected.Invoke(TestValue);
                 Debug.Log("[SLIDDES Modular] Invoked event");
             }
+            DrawTestValue();
         }
+
+        /// <summary>
+        /// Draw the test value field
+        /// </summary>
+        public virtual void DrawTestValue() { }
     }
 }

@@ -11,6 +11,7 @@ namespace SLIDDES.Modular.Editor.Tests
         public Variable<float> vFloat;
 
         public IntVariable intv;
+        public IntEvent intEvent;
 
         public FloatVariable v;
 
@@ -30,6 +31,7 @@ namespace SLIDDES.Modular.Editor.Tests
         private void OnEnable()
         {
             v.onValueChanged.AddListener(DebugFloatValue);
+            intEvent.AddListener(x => DebugInt(x));
         }
 
         private void OnDisable()
@@ -62,6 +64,11 @@ namespace SLIDDES.Modular.Editor.Tests
         private void DebugFloatValue(float f)
         {
             Debug.Log(f);
+        }
+
+        public void DebugInt(int i)
+        {
+            Debug.Log(i);
         }
     }
 }

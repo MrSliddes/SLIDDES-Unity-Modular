@@ -10,10 +10,10 @@ namespace SLIDDES.Modular.Editor
     {
         private DictionaryVariable testValue;
 
-        public override void OnInspectorGUI()
+        public override void DrawTestValue()
         {
-            base.OnInspectorGUI();
-            testValue = EditorGUILayoutExtensions.DictionaryVariableField(testValue, "Test Value");
+            base.DrawTestValue();
+            testValue = EditorGUILayoutExtensions.DictionaryVariableField(new GUIContent("Test Value", "The value to test the invoke with"), testValue);
             if(testValue != null && testValue.Value != null)
             {
                 TestValue = testValue.Value;
