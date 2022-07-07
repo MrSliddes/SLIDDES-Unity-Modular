@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [1.3.0] - 2022-07-07
+### Added
+- More Reference values
+- Sample Example 0
+### Fixed
+- Small scripts adjustments
+- .meta warnings
+### Changed
+- Folder layout
+### Removed
+- Test folder
+
 ## [1.2.2] - 2020-04-15
 ### Added
 - Test values for all events (forgot to add it for some classes)
