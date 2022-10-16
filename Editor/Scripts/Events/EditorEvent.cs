@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using Event = SLIDDES.Modular.Event;
+using Event = SLIDDES.Modular.EventSDS;
 
 namespace SLIDDES.Modular.Editor
 {
-    [CustomEditor(typeof(Event))]
+    [CustomEditor(typeof(EventSDS))]
     public class EditorEvent : UnityEditor.Editor
     {
-        protected Event selected;
+        protected EventSDS selected;
 
         public virtual void OnEnable()
         {
-            selected = (Event)target;
+            selected = (EventSDS)target;
         }
 
         public override void OnInspectorGUI()
@@ -39,11 +39,11 @@ namespace SLIDDES.Modular.Editor
         /// </summary>
         public T0 TestValue { get; protected set; }
 
-        protected Event<T0> selected;
+        protected EventSDS<T0> selected;
 
         public virtual void OnEnable()
         {
-            selected = (Event<T0>)target;
+            selected = (EventSDS<T0>)target;
         }
 
         public override void OnInspectorGUI()

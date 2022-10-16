@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using SEvent = SLIDDES.Modular.Event;
+using SEvent = SLIDDES.Modular.EventSDS;
 
 namespace SLIDDES.Modular.Samples
 {

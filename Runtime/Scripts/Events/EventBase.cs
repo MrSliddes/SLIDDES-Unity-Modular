@@ -15,5 +15,8 @@ namespace SLIDDES.Modular
 #pragma warning disable IDE0051 // Remove unused private members
         [SerializeField] private string description;
 #pragma warning restore IDE0051 // Remove unused private members
+        
+        [Tooltip("The gameobject that invoked this event)")]
+        [HideInInspector] public GameObject invoker;
     }
 }

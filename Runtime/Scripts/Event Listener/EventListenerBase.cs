@@ -11,6 +11,7 @@ namespace SLIDDES.Modular
     /// </summary>
     public abstract class EventListenerBase : MonoBehaviour
     {
-        
+        [Tooltip("The associated gameobject that invoked the event. If left on null the listener will accept all event invokers")]
+        public GameObject associatedInvoker;        
     }
 }

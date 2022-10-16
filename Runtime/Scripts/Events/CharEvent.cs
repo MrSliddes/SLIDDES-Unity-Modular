@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SLIDDES.Modular
 {
     [CreateAssetMenu(fileName = "Event Char", menuName = "SLIDDES/Modular/Events/Event Char")]
-    public class CharEvent : Event<char>
+    public class CharEvent : EventSDS<char>
     {
         
     }

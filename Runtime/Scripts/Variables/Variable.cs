@@ -51,7 +51,7 @@ namespace SLIDDES.Modular
         /// <summary>
         /// Event that gets triggerd if value changes
         /// </summary>
-        public Event<T0> onValueChangedEvent;
+        public EventSDS<T0> onValueChangedEvent;
         /// <summary>
         /// Unity event that gets triggerd if value changes
         /// </summary>
