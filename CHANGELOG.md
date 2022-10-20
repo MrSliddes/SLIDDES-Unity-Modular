@@ -3,12 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [2.0.0] - 2022-10-16
+## [2.0.0] - 2022-10-20
 ### Changed
 - Renamed Event/Event<T> to EventSDS/EventSDS<T>
-
-### Removed
-- Event conditions
+- Event conditions, now more modular code structure
 
 ## [1.3.0] - 2022-07-07
 ### Added

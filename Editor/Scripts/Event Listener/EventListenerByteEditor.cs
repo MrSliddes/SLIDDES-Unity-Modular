@@ -16,7 +16,7 @@ namespace SLIDDES.Modular.Editor
             selectedType = (EventListenerByte)target;
         }
 
-        public override void DrawGUIEventObjectField()
+        public override void DrawEventObjectField()
         {
             selectedType.Event = (EventSDS<byte>)EditorGUILayout.ObjectField(new GUIContent("Event", "The event to listen for"), selectedType.Event, typeof(ByteEvent), false);
         }
