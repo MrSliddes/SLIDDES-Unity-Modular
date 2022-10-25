@@ -36,7 +36,11 @@ namespace SLIDDES.Modular
             {
                 this.value = value;
                 if(onValueChanged != null) onValueChanged.Invoke(Value);
-                if(onValueChangedEvent != null) onValueChangedEvent.Invoke(Value);
+                if(onValueChangedEvent != null)
+                {
+                    if(invoker != null) onValueChangedEvent.invoker = invoker;
+                    onValueChangedEvent.Invoke(Value);
+                }
             }
         }
 
@@ -56,6 +60,10 @@ namespace SLIDDES.Modular
         /// Unity event that gets triggerd if value changes
         /// </summary>
         [HideInInspector] public UnityEvent<T0> onValueChanged;
+        /// <summary>
+        /// The invoker that changed this value
+        /// </summary>
+        [HideInInspector] public GameObject invoker;
 
         /// <summary>
         /// The value that gets set in the editor by user.
