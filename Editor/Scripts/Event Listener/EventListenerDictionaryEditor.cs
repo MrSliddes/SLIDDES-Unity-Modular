@@ -24,10 +24,10 @@ namespace SLIDDES.Modular.Editor
                     base.DrawEventCondition();
                     break;
                 case DictionaryVariableReference.ReferenceType.key:
-                    selected.eventCondition = (EventCondition)EventConditionInternal.DrawEventConditionOptions("Dictionary`2 KeyValue", (int)selected.eventCondition);
+                    selected.eventCondition = (EventCondition)EventConditionEditor.DrawEventConditionOptions("Dictionary`2 KeyValue", (int)selected.eventCondition);
                     break;
                 case DictionaryVariableReference.ReferenceType.value:
-                    selected.eventCondition = (EventCondition)EventConditionInternal.DrawEventConditionOptions("Dictionary`2 KeyValue", (int)selected.eventCondition);
+                    selected.eventCondition = (EventCondition)EventConditionEditor.DrawEventConditionOptions("Dictionary`2 KeyValue", (int)selected.eventCondition);
                     break;
                 default:
                     break;

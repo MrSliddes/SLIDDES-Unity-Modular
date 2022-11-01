@@ -1,18 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 
-namespace SLIDDES.Modular
+namespace SLIDDES.Modular.Editor
 {
-    /// <summary>
-    /// Static class for handling event conditions
-    /// </summary>
-    public static class EventConditionInternal
+    public class EventConditionEditor : UnityEditor.Editor
     {
         /// <summary>
         /// Draw the right event conditions for the type
@@ -22,8 +15,6 @@ namespace SLIDDES.Modular
         /// <returns>EditorGUILayout.IntPopup selected enum value</returns>
         public static int DrawEventConditionOptions(string typeName, int selectedValue)
         {
-#if UNITY_EDITOR
-
             List<GUIContent> displayOptions = new List<GUIContent>();
             List<int> optionValues = new List<int>();
 
@@ -63,7 +54,7 @@ namespace SLIDDES.Modular
             foreach(int item in optionValues)
             {
                 switch(item)
-                {                    
+                {
                     case 0: displayOptions.Add(new GUIContent("none", "Event will always pass")); break;
 
                     case 1: displayOptions.Add(new GUIContent("==", "Equal too")); break;
@@ -110,7 +101,6 @@ namespace SLIDDES.Modular
             }
 
             return EditorGUILayout.IntPopup(new GUIContent("Event Condition"), selectedValue, displayOptions.ToArray(), optionValues.ToArray());
-#endif
         }
     }
 }

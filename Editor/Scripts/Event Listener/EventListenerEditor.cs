@@ -52,7 +52,7 @@ namespace SLIDDES.Modular.Editor
 
         public virtual void DrawEventCondition()
         {
-            selected.eventCondition = (EventCondition)EventConditionInternal.DrawEventConditionOptions(typeof(T0).Name, (int)selected.eventCondition);
+            selected.eventCondition = (EventCondition)EventConditionEditor.DrawEventConditionOptions(typeof(T0).Name, (int)selected.eventCondition);
         }
 
         public override void OnInspectorGUI()
