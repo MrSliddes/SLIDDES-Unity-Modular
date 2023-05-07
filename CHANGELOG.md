@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [2.2.0] - 2023-05-07
+### Added
+- Associated invoker can now be set in event listener via public method
+- Variable Handler for getting the values of Variables
+
 ## [2.1.1] - 2022-11-01
 ### Fixed
 - Build error fix

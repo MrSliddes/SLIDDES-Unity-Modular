@@ -16,6 +16,15 @@ namespace SLIDDES.Modular
         [SerializeField] private string description;
 
         [Tooltip("The associated gameobject that invoked the event. If left on null the listener will accept all event invokers")]
-        public GameObject associatedInvoker;        
+        public GameObject associatedInvoker;
+
+        /// <summary>
+        /// Set the associated invoker
+        /// </summary>
+        /// <param name="associatedInvoker">The gameobject that is associated with this event listener</param>
+        public void SetAssociatedInvoker(GameObject associatedInvoker)
+        {
+            this.associatedInvoker = associatedInvoker;
+        }
     }
 }
