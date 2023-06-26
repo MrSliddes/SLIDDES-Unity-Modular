@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "Float Variable", menuName = "SLIDDES/Modular/Variable Float")]
+    [CreateAssetMenu(fileName = "Variable Float", menuName = "SLIDDES/Modular/Variables/Variable Float")]
     public class FloatVariable : Variable<float>
     {
         

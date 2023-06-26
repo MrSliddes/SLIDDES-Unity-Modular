@@ -5,13 +5,13 @@ using UnityEditor;
 
 namespace SLIDDES.Modular.Editor
 {
-    [CustomEditor(typeof(DecimalEvent))]
-    public class EditorEventDecimal : EditorEvent<decimal>
+    [CustomEditor(typeof(DoubleEvent))]
+    public class EventDoubleEditor : EventEditor<double>
     {
         public override void DrawTestValue()
         {
             base.DrawTestValue();
-            TestValue = EditorGUILayoutExtensions.DecimalField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
+            TestValue = EditorGUILayout.DoubleField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
         }
     }
 }

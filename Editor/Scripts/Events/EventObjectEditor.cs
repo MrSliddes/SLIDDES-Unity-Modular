@@ -6,7 +6,7 @@ using UnityEditor;
 namespace SLIDDES.Modular.Editor
 {
     [CustomEditor(typeof(ObjectEvent))]
-    public class EditorEventObject : EditorEvent<object>
+    public class EditorEventObject : EventEditor<object>
     {
         public override void DrawTestValue()
         {

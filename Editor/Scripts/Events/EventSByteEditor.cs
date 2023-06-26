@@ -5,13 +5,13 @@ using UnityEditor;
 
 namespace SLIDDES.Modular.Editor
 {
-    [CustomEditor(typeof(ShortEvent))]
-    public class EditorEventShort : EditorEvent<short>
+    [CustomEditor(typeof(SByteEvent))]
+    public class EventSByteEditor : EventEditor<sbyte>
     {
         public override void DrawTestValue()
         {
             base.DrawTestValue();
-            TestValue = (short)EditorGUILayout.IntField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
+            TestValue = (sbyte)EditorGUILayout.IntField(new GUIContent("Test Value", "The value to test the invoke with"), TestValue);
         }
     }
 }

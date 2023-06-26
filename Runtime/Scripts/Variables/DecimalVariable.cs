@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "Decimal Variable", menuName = "SLIDDES/Modular/Variable Decimal")]
+    [CreateAssetMenu(fileName = "Variable Decimal", menuName = "SLIDDES/Modular/Variables/Variable Decimal")]
     public class DecimalVariable : Variable<decimal>
     {
 

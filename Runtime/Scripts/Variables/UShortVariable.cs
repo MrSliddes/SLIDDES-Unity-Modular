@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "UShort Variable", menuName = "SLIDDES/Modular/Variable UShort")]
+    [CreateAssetMenu(fileName = "Variable UShort", menuName = "SLIDDES/Modular/Variables/Variable UShort")]
     public class UShortVariable : Variable<ushort>
     {
         

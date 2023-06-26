@@ -7,7 +7,7 @@ using Event = SLIDDES.Modular.EventSDS;
 namespace SLIDDES.Modular.Editor
 {
     [CustomEditor(typeof(EventSDS))]
-    public class EditorEvent : UnityEditor.Editor
+    public class EventEditor : UnityEditor.Editor
     {
         protected EventSDS selected;
 
@@ -32,7 +32,7 @@ namespace SLIDDES.Modular.Editor
     }
 
     //[CustomEditor(typeof(Event<T0>))]
-    public abstract class EditorEvent<T0> : UnityEditor.Editor
+    public abstract class EventEditor<T0> : UnityEditor.Editor
     {
         /// <summary>
         /// Value to test the Invoke event with

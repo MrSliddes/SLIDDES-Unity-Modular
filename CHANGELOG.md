@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [2.3.0] - 2023-06-26
+### Added
+- GameObject SO value for event / variable
+### Changed
+- Renamed Editor Event naming to correct format
+- Creating SO variables now has its own group in SO menuName
+
 ## [2.2.0] - 2023-05-07
 ### Added
 - Associated invoker can now be set in event listener via public method

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "Byte Variable", menuName = "SLIDDES/Modular/Variable Byte")]
+    [CreateAssetMenu(fileName = "Variable Byte", menuName = "SLIDDES/Modular/Variables/Variable Byte")]
     public class ByteVariable : Variable<byte>
     {
         

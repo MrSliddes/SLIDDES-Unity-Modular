@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "Array Variable", menuName = "SLIDDES/Modular/Variable Array")]
+    [CreateAssetMenu(fileName = "Variable Array", menuName = "SLIDDES/Modular/Variables/Variable Array")]
     public class ArrayVariable : Variable<ArrayList>
     {
         

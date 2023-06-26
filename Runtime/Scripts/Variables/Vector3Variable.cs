@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
-    [CreateAssetMenu(fileName = "Vector3 Variable", menuName = "SLIDDES/Modular/Variable Vector3")]
+    [CreateAssetMenu(fileName = "Variable Vector3", menuName = "SLIDDES/Modular/Variables/Variable Vector3")]
     public class Vector3Variable : Variable<Vector3>
     {
         

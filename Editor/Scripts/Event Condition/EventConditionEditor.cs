@@ -31,6 +31,8 @@ namespace SLIDDES.Modular.Editor
                 "Dictionary`2" => new int[2] { 1, 2 },
                 "Dictionary`2 KeyValue" => new int[2] { 7, 8 },
                 "Double" => new int[6] { 1, 2, 3, 4, 5, 6 },
+                "Float" => new int[6] { 1, 2, 3, 4, 5, 6 },
+                "GameObject" => new int[2] { 1, 2 },
                 "Single" => new int[6] { 1, 2, 3, 4, 5, 6 },
                 "Int32" => new int[6] { 1, 2, 3, 4, 5, 6 },
                 "List`1" => new int[10] { 9, 10, 1, 2, 3, 4, 5, 6, 7, 8 },

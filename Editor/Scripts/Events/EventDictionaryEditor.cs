@@ -5,16 +5,15 @@ using UnityEditor;
 
 namespace SLIDDES.Modular.Editor
 {
-    [CustomEditor(typeof(ListEvent))]
-    public class EditorEventList : EditorEvent<List<ScriptableObject>>
+    [CustomEditor(typeof(DictionaryEvent))]
+    public class EventDictionaryEditor : EventEditor<Dictionary<ScriptableObject, ScriptableObject>>
     {
-        private ListVariable testValue;
+        private DictionaryVariable testValue;
 
         public override void DrawTestValue()
         {
             base.DrawTestValue();
-
-            testValue = EditorGUILayoutExtensions.ListVariableField(new GUIContent("Test Value", "The value to test the invoke with"), testValue);
+            testValue = EditorGUILayoutExtensions.DictionaryVariableField(new GUIContent("Test Value", "The value to test the invoke with"), testValue);
             if(testValue != null && testValue.Value != null)
             {
                 TestValue = testValue.Value;
