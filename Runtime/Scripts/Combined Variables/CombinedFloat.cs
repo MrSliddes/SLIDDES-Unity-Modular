@@ -13,7 +13,7 @@ namespace SLIDDES.Modular
 
 		public override float GetValue()
 		{
-			return (baseValue + addedValue) * addedPercentageValue;
+			return (baseValue + addedValue) * (addedPercentageValue == 0 ? 1 : addedPercentageValue);
 		}
 
 		public static float operator +(CombinedFloat c, float v) => c.addedValue + v;
