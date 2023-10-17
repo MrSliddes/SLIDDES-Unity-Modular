@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace SLIDDES.Modular
 {
+	[System.Serializable]
     public class CombinedInt : CombinedVariable<int>
     {
 		public CombinedInt(int baseValue) : base(baseValue)
