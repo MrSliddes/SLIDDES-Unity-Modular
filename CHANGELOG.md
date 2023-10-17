@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [2.4.0] - 2023-10-17
+### Added
+- CombinedVariable.cs for float & int
+
 ## [2.3.0] - 2023-06-26
 ### Added
 - GameObject SO value for event / variable
