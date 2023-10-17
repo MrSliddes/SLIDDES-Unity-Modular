@@ -6,7 +6,7 @@ namespace SLIDDES.Modular
 {
 	[System.Serializable]
     public class CombinedFloat : CombinedVariable<float>
-    {
+    {	
 		public CombinedFloat(float baseValue) : base(baseValue)
 		{
 		}

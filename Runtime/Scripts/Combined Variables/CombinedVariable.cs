@@ -30,6 +30,7 @@ namespace SLIDDES.Modular
         public CombinedVariable(T0 baseValue)
         {
             this.baseValue = baseValue;
+            Calculate();
         }            
 
         public void Add(UnityAction<CombinedVariable<T0>> action)
