@@ -6,11 +6,17 @@ namespace SLIDDES.Modular
 {
     public class CombinedFloat : CombinedVariable<float>
     {
+		public CombinedFloat(float baseValue) : base(baseValue)
+		{
+		}
+
 		public override void Calculate()
 		{
 			base.Calculate();
 			Value = (baseValue + addedValue) * addedPercentageValue;
 		}
+
+
 
 		public static float operator +(CombinedFloat c, float v) => c.addedValue + v;
 		public static float operator -(CombinedFloat c, float v) => c.addedValue - v;

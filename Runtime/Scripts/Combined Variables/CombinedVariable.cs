@@ -27,6 +27,10 @@ namespace SLIDDES.Modular
 
         private List<UnityAction<CombinedVariable<T0>>> actions = new List<UnityAction<CombinedVariable<T0>>>();
 
+        public CombinedVariable(T0 baseValue)
+        {
+            this.baseValue = baseValue;
+        }            
 
         public void Add(UnityAction<CombinedVariable<T0>> action)
         {

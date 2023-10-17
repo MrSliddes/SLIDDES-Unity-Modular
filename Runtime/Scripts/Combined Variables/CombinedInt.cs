@@ -6,6 +6,10 @@ namespace SLIDDES.Modular
 {
     public class CombinedInt : CombinedVariable<int>
     {
+		public CombinedInt(int baseValue) : base(baseValue)
+		{
+		}
+
 		public override void Calculate()
 		{
 			base.Calculate();
