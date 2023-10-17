@@ -7,10 +7,7 @@ namespace SLIDDES.Modular
 {
     public abstract class CombinedVariable<T0>
     {
-        /// <summary>
-        /// The total combined value
-        /// </summary>
-        public T0 Value { get; protected set; }
+        public T0 Value => GetValue();
 
         /// <summary>
         /// The base value
@@ -58,6 +55,11 @@ namespace SLIDDES.Modular
                 actions.Remove(action);
                 Calculate();
             }
+        }
+
+        public virtual T0 GetValue()
+        {
+            return baseValue;
         }
 
 		//public static T0 operator +(CombinedVariable<T0> c, T0 v) => c.addedValue + v;

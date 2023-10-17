@@ -11,10 +11,9 @@ namespace SLIDDES.Modular
 		{
 		}
 
-		public override void Calculate()
+		public override int GetValue()
 		{
-			base.Calculate();
-			Value = (baseValue + addedValue) * addedPercentageValue;
+			return (baseValue + addedValue) * addedPercentageValue;
 		}
 
 		public static int operator +(CombinedInt c, int v) => c.addedValue + v;
